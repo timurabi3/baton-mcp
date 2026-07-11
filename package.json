@@ -1,0 +1,30 @@
+{
+  "name": "baton-mcp",
+  "version": "0.1.0",
+  "description": "Continues where you left off. A shared session-handoff MCP server that lets Claude Code, Codex, and any MCP agent resume each other's work.",
+  "type": "module",
+  "bin": {
+    "baton-mcp": "server.mjs"
+  },
+  "files": [
+    "server.mjs",
+    "PROTOCOL.md",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude-code",
+    "codex",
+    "agent",
+    "handoff",
+    "session",
+    "resume",
+    "continue-where-you-left-off"
+  ],
+  "author": "Timur Oral",
+  "license": "MIT"
+}
