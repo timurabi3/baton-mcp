@@ -1,5 +1,5 @@
 {
-  "name": "baton-mcp",
+  "name": "@timurabi3/baton-mcp",
   "version": "0.1.0",
   "description": "Continues where you left off. A shared session-handoff MCP server that lets Claude Code, Codex, and any MCP agent resume each other's work.",
   "type": "module",
@@ -9,10 +9,15 @@
   "files": [
     "server.mjs",
     "PROTOCOL.md",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "engines": {
     "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test"
   },
   "keywords": [
     "mcp",
@@ -25,6 +30,14 @@
     "resume",
     "continue-where-you-left-off"
   ],
-  "author": "Timur Oral",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timurabi3/baton-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timurabi3/baton-mcp/issues"
+  },
+  "homepage": "https://github.com/timurabi3/baton-mcp#readme",
+  "author": "Timur Abi",
   "license": "MIT"
 }

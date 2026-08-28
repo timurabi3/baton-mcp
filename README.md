@@ -29,27 +29,28 @@ Baton writes the **intent to disk** in an agent-neutral format both sides read:
 ## Install
 
 ```bash
-# no install needed — runs via npx
-npx baton-mcp
+# no install needed — runs from GitHub via npx
+npx -y github:timurabi3/baton-mcp
 ```
 
 ### Claude Code
 ```bash
-claude mcp add baton -- npx -y baton-mcp
-# identify this agent in handoffs:
-claude mcp add baton -e BATON_AGENT=claude-code -- npx -y baton-mcp
+# identify this agent in handoffs with BATON_AGENT:
+claude mcp add baton -e BATON_AGENT=claude-code -- npx -y github:timurabi3/baton-mcp
 ```
 
 ### Codex — `~/.codex/config.toml`
 ```toml
 [mcp_servers.baton]
 command = "npx"
-args = ["-y", "baton-mcp"]
+args = ["-y", "github:timurabi3/baton-mcp"]
 env = { BATON_AGENT = "codex" }
 ```
 
 Then add one line to your instructions (`CLAUDE.md` / `AGENTS.md`):
 > **At session start, call `baton_pick_up`. Before you stop, call `baton_pass`.**
+
+> An unrelated package named `baton-mcp` exists on npm — install from GitHub as shown above.
 
 ## Tools
 
@@ -82,6 +83,7 @@ Codex        ──(fresh session)────────►  baton_pick_up  �
 - **Zero dependencies.** MCP stdio is newline-delimited JSON-RPC 2.0 — implemented directly, so `npx` works offline and the whole thing is auditable in one file.
 - **stdout is protocol-only**; all logs go to stderr.
 - Storage is per-project (`.baton/` under the project root, override with `BATON_PROJECT`).
+- The on-disk contract is spelled out in [`PROTOCOL.md`](PROTOCOL.md).
 
 ## License
-MIT © Timur Oral
+MIT © Timur Abi
