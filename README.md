@@ -1,6 +1,7 @@
 # 🏃 Baton
 
 **Continues where you left off.**
+<img width="850" height="419" alt="image" src="https://github.com/user-attachments/assets/f07193a3-701a-4698-80f4-eeb23be7ea3e" />
 
 Baton is a tiny, zero-dependency [MCP](https://modelcontextprotocol.io) server that gives your AI coding agents a **shared relay baton**. When one agent (or one session) runs out of context and stops, the next one — even a *different* agent — picks up exactly where the last left off.
 
