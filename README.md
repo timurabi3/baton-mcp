@@ -81,6 +81,11 @@ Then add one line to your instructions (`CLAUDE.md` / `AGENTS.md`):
 
 ## The relay in practice
 
+<p align="center">
+  <img src="assets/handoff-demo.gif" alt="Claude Code passes the baton after hitting its context limit; a fresh Codex session picks it up with the plan, next steps and gotchas intact" width="100%">
+</p>
+<p align="center"><sub>A real run against <code>server.mjs</code>: one agent stops mid-task, a fresh agent picks up the plan exactly where it stopped.</sub></p>
+
 ```text
 Claude Code ──(hits context limit)──▶ baton_pass { handoffNote, next, watchOut }
                                           │  writes .baton/ + HANDOFF.md
